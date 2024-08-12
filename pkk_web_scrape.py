@@ -37,7 +37,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 import pandas as pd
 
-chrome_driver_path = "D:\\Project Python\\chromedriver-win64\\chromedriver.exe"
+chrome_driver_path = "/usr/local/bin/chromedriver"
 # Konfigurasi opsi Chrome
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Menjalankan Chrome dalam mode headless
