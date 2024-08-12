@@ -38,10 +38,11 @@ jobs:
           # unzip ~/chromedriver_linux64.zip -d ~/
           # sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
           # sudo chmod +x /usr/local/bin/chromedriver
+          mkdir ~/chromedriver
           wget -N https://storage.googleapis.com/chrome-for-testing-public/127.0.6533.99/linux64/chrome-linux64.zip -P ~/
-          unzip ~/chrome-linux64.zip chromedriver -d ~/
-          sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
+          unzip ~/chrome-linux64.zip -d ~/chromedriver
+          sudo mv ~/chromedriver /usr/local/bin/
+          sudo chmod -R +x /usr/local/bin/chromedriver
         shell: bash
 
       - name: Install dependencies
