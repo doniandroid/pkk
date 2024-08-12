@@ -47,8 +47,10 @@ chrome_options.add_argument("--headless")  # Menjalankan Chrome dalam mode headl
 
 
 # Inisialisasi driver Chrome
-driver_service = Service(executable_path=chrome_driver_path)
+# driver_service = Service(executable_path=chrome_driver_path)
+driver_service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=driver_service, options=chrome_options)
+
 
 # Inisialisasi WebDriver (sesuaikan path ke ChromeDriver Anda)
 # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
