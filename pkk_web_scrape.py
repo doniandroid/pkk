@@ -60,7 +60,7 @@ driver = webdriver.Chrome(service=driver_service, options=chrome_options)
 
 try:
     # Buka URL halaman login
-    driver.get("https://simpkk.kabsemarangtourism.id/index.php/login")
+    driver.get("https://simbarjaga.kabsemarangtourism.id/login")
 
         # Tunggu hingga elemen input username muncul
     WebDriverWait(driver, 10).until(
@@ -84,7 +84,7 @@ try:
     sign_in_button.click()
 
     # Navigasi ke halaman yang diperlukan
-    driver.get("https://simpkk.kabsemarangtourism.id/admin/dawis")
+    driver.get("https://simbarjaga.kabsemarangtourism.id/admin/dawis")
 
     # Tunggu hingga tabel muncul
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//table[@id='dataTable']")))
